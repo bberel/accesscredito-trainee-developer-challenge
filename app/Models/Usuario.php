@@ -19,6 +19,4 @@ class Usuario extends Model
         'estado',
         'cep'
     ];
-
-    
 }
