@@ -1,0 +1,1 @@
+# Teste prático - Desenvolvedor Trainee
