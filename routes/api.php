@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+// use App\Http\Controllers\UsuarioController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,9 +15,3 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::get('/usuario', 'UsuarioController@index');
-Route::get('/usuario/{id}', 'UsuarioController@show');
-Route::post('/usuario', 'UsuarioController@store');
-Route::put('/usuario/{id}', 'UsuarioController@update');
-Route::delete('/usuario/{id}', 'UsuarioController@delete');
