@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use DB;
 use Str;
+use App\Models\Usuario;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,18 +16,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // User::factory(10)->create();
+        Usuario::create([
+            'nome' => 'Aluizio Silva de Paiva Junior',
+            'cpf' => '111.222.333-44',
+            'data_nascimento' => '1998-04-02',
+            'email' => 'jr-paiva@live.com',
+            'telefone' => '92 98153 1573',
+            'endereco' => 'Rua Flávio Costa',
+            'cidade' => 'Manaus',
+            'estado' => 'AM',
+            'cep' => 69080710
+        ])->save();
 
-        DB::table('usuarios')->insert([
-            'nome' => Str::random(50),
-            'cpf' => Str::random(14),
-            'data_nascimento' => '2000-1-1',
-            'email' => Str::random(10).'@gmail.com',
-            'telefone' => '99 99999 9999',
-            'endereco' => Str::random(20),
-            'cidade' => Str::random(10),
-            'estado' => Str::random(10),
-            'cep' => 00000000
-        ]);
     }
 }
