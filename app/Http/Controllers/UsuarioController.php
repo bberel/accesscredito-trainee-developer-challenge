@@ -55,7 +55,8 @@ class UsuarioController extends Controller
             'cep' => 'required',
         ]);
 
-        $updated = $usuario::fill($request->all());
+        $updated = $usuario->fill($request->all());
+        $updated->save();
 
         return (new UsuarioResource($updated))
                 ->response()
